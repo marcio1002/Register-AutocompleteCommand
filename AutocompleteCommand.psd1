@@ -12,7 +12,7 @@
     AliasesToExport   = @('')
     PrivateData       = @{
         PSData = @{
-            Tags = @('autocomplete', 'command', 'psreadline', '')
+            Tags = @('autocomplete', 'command', 'psreadline')
         }
     }
 }

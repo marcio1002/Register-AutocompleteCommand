@@ -1,6 +1,30 @@
 function Register-AutocompleteCommand {
+    <#
+    .SYNOPSIS
+        Register-AutocompleteCommand is a PowerShell module that dynamically enhances the user experience by enabling auto-completion for specified commands.
+
+    .DESCRIPTION
+        This module provides a single primary function, `Register-AutocompleteCommand`, which enables autocompletion for specified commands.
+
+    .PARAMETER Commands
+        A list of command names for which autocompletion should be enabled.
+
+    .EXAMPLE
+        PS> Register-AutocompleteCommand 'git', 'docker', 'kubectl'
+        PS> Register-AutocompleteCommand -Commands 'git', 'docker', 'kubectl'
+        PS> Register-AutocompleteCommand -Commands @('git', 'docker', 'kubectl')
+#>
+
     param(
-        [string[]] $Commands
+        [Parameter(
+            Mandatory, 
+            ValueFromPipeline,
+            ValueFromPipelineByPropertyName, 
+            HelpMessage = "A list of command names for which autocompletion should be enabled."
+        )]
+        [ValidateNotNullOrEmpty()]
+        [string[]] 
+        $Commands
     )
 
     Register-ArgumentCompleter -Native -CommandName $Commands -ScriptBlock {
