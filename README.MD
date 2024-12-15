@@ -78,4 +78,4 @@ This will ensure that autocompletion is always enabled for the specified command
 
 ## License
 
-This project is licensed under the [Licença CC BY-NC-SA 4.0](https://github.com/marcio1002/money-management/blob/master/LICENCE.MD). See the LICENSE file for details.
+This project is licensed under the [Licença CC BY-NC-SA 4.0](./LICENCE.MD). See the LICENSE file for details.
